@@ -1,0 +1,20 @@
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules/
+bower_components/
+
+# other
+.tmp
+report/plato
+dist/
+src/dist/
+src/server/
+src/app/admin/
+src/app/blocks/
+src/app/core/
+src/app/dashboard/
+src/app/layout/
+src/app/widgets/
+src/test/
+src/test-helpers/
+README.md.old
