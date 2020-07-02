@@ -1,6 +1,6 @@
 <html>
   <head>
-<meta name="image" property="og:image" content="https://cdn.jsdelivr.net/gh/shrivastava-prateek/angularjs-es6-webpack/src/images/AngularJS_logo.svg.png"/>
+<meta name="image" property="og:image" content="https://cdn.jsdelivr.net/gh/shrivastava-prateek/angularjs-es6-webpack/src/images/AngularJS_logo.svg.png">
                                                                                                                                           </head>
                                                                                                                                           <body>
                                                                                                                                           <h1>angularjs-es6-webpack</h1>
