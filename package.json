@@ -22,7 +22,7 @@
     "angularplus": "^0.9.2",
     "body-parser": "~1.8.2",
     "express": "~4.9.3",
-    "morgan": "~1.1.1",
+    "morgan": "~1.9.1",
     "serve-favicon": "~2.0.1",
     "toastr": "^2.1.4",
     "ui-router-helper": "^0.1.4"
