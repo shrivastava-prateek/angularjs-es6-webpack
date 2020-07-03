@@ -31,7 +31,7 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "browser-sync": "~2.12.2",
+    "browser-sync": "~2.26.7",
     "chai": "~3.1.0",
     "chai-as-promised": "~5.1.0",
     "chalk": "~1.1.0",
