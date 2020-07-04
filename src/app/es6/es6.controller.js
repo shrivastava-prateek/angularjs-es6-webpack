@@ -7,7 +7,7 @@ export default class ES6Controller {
     }
 
     changeName(newName){
-        this.name = newName?newName:'deafult name';
+        this.name = newName?this.name=='Prateek Shrivastava'?newName:'Prateek Shrivastava':'No name provided';
     }
 
     changeAge(newAge){
@@ -16,7 +16,7 @@ export default class ES6Controller {
 }
 
 
-(function() {
+/* (function() {
     'use strict';
     angular.module('app.es6').controller('ES6Controller',ES6Controller);
-})();
+})(); */
