@@ -38,7 +38,7 @@
     "dateformat": "~1.0.8-1.2.3",
     "debug": "~2.6.9",
     "del": "~1.2.0",
-    "glob": "~4.5.3",
+    "glob": "~7.1.6",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "~1.4.2",
     "gulp-autoprefixer": "~2.3.1",
