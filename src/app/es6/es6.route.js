@@ -1,6 +1,7 @@
-export default function eS6Config($stateProvider, $urlRouterProvider){
+export default function eS6Config($stateProvider, $urlRouterProvider) {
+
     $urlRouterProvider.otherwise('/home');
-    
+
       $stateProvider
 
     // HOME STATES AND NESTED VIEWS ========================================
@@ -13,7 +14,7 @@ export default function eS6Config($stateProvider, $urlRouterProvider){
 
     // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
     .state('about', {
-        // we'll get to this in a bit       
+        // we'll get to this in a bit
     });
 }
 

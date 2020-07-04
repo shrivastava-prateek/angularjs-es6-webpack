@@ -1,5 +1,5 @@
 {
-    "excludeFiles": ["node_modules/**", "bower_components/**"],
+    "excludeFiles": ["node_modules/**", "bower_components/**","gulpfile.js", "webpack.config.js"],
 
     "requireCurlyBraces": [
         "if",
@@ -17,7 +17,6 @@
       "allowComments": true,
       "allowRegex": true
     },
-    "validateIndentation": 2,
     "validateQuoteMarks": "'",
 
     "disallowMultipleLineStrings": true,
@@ -48,7 +47,7 @@
     "requireSpaceAfterBinaryOperators": true,
     "requireSpacesInConditionalExpression": true,
     "requireSpaceBeforeBlockStatements": true,
-    "requireLineFeedAtFileEnd": true,
+    "requireLineFeedAtFileEnd": false,
     "disallowSpacesInsideArrayBrackets": "all",
     "disallowSpacesInsideParentheses": true,
 

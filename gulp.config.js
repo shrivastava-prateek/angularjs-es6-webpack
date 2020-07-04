@@ -1,5 +1,5 @@
 module.exports = function() {
-  var client = './src/client/';
+  var client = './src/';
   var server = './src/server/';
   var clientApp = client + 'app/';
   var report = './report/';
@@ -9,8 +9,8 @@ module.exports = function() {
   var wiredep = require('wiredep');
   var bowerFiles = wiredep({ devDependencies: true })['js'];
   var bower = {
-    json: require('./bower.json'),
-    directory: './bower_components/',
+    json: require('./package.json'),
+    directory: './node_modules/',
     ignorePath: '../..'
   };
   var nodeModules = 'node_modules';
@@ -89,8 +89,7 @@ module.exports = function() {
      */
     bower: bower,
     packages: [
-      './package.json',
-      './bower.json'
+      './package.json'
     ],
 
     /**
