@@ -1,4 +1,4 @@
-module.exports = function() {
+module.exports = function () {
   var client = './src/';
   var server = './src/server/';
   var clientApp = client + 'app/';
@@ -6,8 +6,8 @@ module.exports = function() {
   var root = './';
   var specRunnerFile = 'specs.html';
   var temp = './.tmp/';
-  var wiredep = require('wiredep');
-  var bowerFiles = wiredep({ devDependencies: true })['js'];
+  //var wiredep = require('wiredep');
+  //var bowerFiles = wiredep({ devDependencies: true })['js'];
   var bower = {
     json: require('./package.json'),
     directory: './node_modules/',
@@ -132,7 +132,7 @@ module.exports = function() {
   /**
    * wiredep and bower settings
    */
-  config.getWiredepDefaultOptions = function() {
+  config.getWiredepDefaultOptions = function () {
     var options = {
       bowerJson: config.bower.json,
       directory: config.bower.directory,
@@ -153,11 +153,12 @@ module.exports = function() {
   function getKarmaOptions() {
     var options = {
       files: [].concat(
-        bowerFiles,
+        //bowerFiles,
         config.specHelpers,
-        clientApp + '**/*.module.js',
-        clientApp + '**/*.js',
-        temp + config.templateCache.file,
+        clientApp + '**/app.module.js',
+        clientApp + '**/es6/*.module.js',
+        clientApp + '**/index.js',
+        //temp + config.templateCache.file,
         config.serverIntegrationSpecs
       ),
       exclude: [],

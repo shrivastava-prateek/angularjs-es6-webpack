@@ -1,4 +1,4 @@
-import 'angular-ui-router';
+import uirouter from 'angular-ui-router';
 import eS6Config from './es6.route.js';
 import ES6Controller from './es6.controller.js';
 

@@ -1,17 +1,17 @@
 {
-  "name": "AngularJSES6Webpack",
+  "name": "angularjses6webpack",
   "description": "AngularJSES6Webpack Project: Migrating from AngularJS to Angular? Try converting existing components using ES6",
   "version": "0.0.0",
   "scripts": {
     "init": "npm install",
     "postinstall": "webdriver-manager update",
-    "dev": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --config webpack.config.js --mode development --open --progress --colors",
+    "start": "",
     "test": "gulp test",
-    "webpackstart": "node src/server/app.js"
+    "build": "webpack --config webpack.config.js --mode production",
+    "dev-build": "webpack --config webpack.config.js --mode development"
   },
   "dependencies": {
-    "@uirouter/angularjs": "^1.0.26",
     "angular": "^1.8.0",
     "angular-animate": "^1.8.0",
     "angular-sanitize": "^1.8.0",
@@ -27,8 +27,7 @@
     "moment": "^2.27.0",
     "morgan": "~1.9.1",
     "serve-favicon": "^2.5.0",
-    "toastr": "^2.1.4",
-    "ui-router-helper": "^0.1.4"
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -37,7 +36,7 @@
     "babel-loader": "^8.1.0",
     "bardjs": "~0.1.8",
     "browser-sync": "~2.26.7",
-    "chai": "~3.1.0",
+    "chai": "^3.1.0",
     "chai-as-promised": "~5.1.0",
     "chalk": "~1.1.0",
     "dateformat": "~1.0.8-1.2.3",
@@ -87,9 +86,10 @@
     "karma-phantomjs-launcher": "~1.0.0",
     "karma-safari-launcher": "~0.1.1",
     "karma-sinon": "~1.0.3",
+    "karma-webpack": "^4.0.2",
     "lodash": "~4.17.15",
     "method-override": "~2.3.4",
-    "mocha": "~2.2.5",
+    "mocha": "^2.2.5",
     "node-notifier": "~4.0.3",
     "phantomjs-prebuilt": "~2.1.4",
     "plato": "~1.2.0",

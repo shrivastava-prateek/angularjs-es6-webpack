@@ -1,5 +1,6 @@
 module.exports = function(config) {
   var gulpConfig = require('./gulp.config')();
+  const webpack = require('./webpack.test-config');
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -10,7 +11,8 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai', 'sinon', 'chai-sinon'],
 
     // list of files / patterns to load in the browser
-    files: gulpConfig.karma.files,
+    //files: gulpConfig.karma.files,
+    files: ['src/index.tests.js'],
 
     // list of files to exclude
     exclude: gulpConfig.karma.exclude,
@@ -21,7 +23,16 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: gulpConfig.karma.preprocessors,
+    // webpack (will run babel)
+   // preprocessors: gulpConfig.karma.preprocessors,
+   preprocessors: { 'src/index.tests.js': ['webpack'], 'src/**/*.test.js': ['webpack']},
+   webpack,
+   webpackMiddleware: {
+    stats: 'errors-only'
+  },
+  webpackServer: {
+    noInfo: true,
+  },
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'coverage'
@@ -50,7 +61,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     //        browsers: ['Chrome', 'ChromeCanary', 'FirefoxAurora', 'Safari', 'PhantomJS'],
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

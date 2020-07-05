@@ -56,7 +56,17 @@
 
     "globals": {
         "angular": false,
-        "$": false
+        "$": false,
+
+         /* MOCHA */
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false,
+    /* CHAI */
+    "expect":false
     },
     "esversion": 6
 }
