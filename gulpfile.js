@@ -629,7 +629,13 @@ function startTests(singleRun, done) {
     configFile: __dirname + '/karma.conf.js',
     exclude: excludeFiles,
     singleRun: true
-}, karmaCompleted);
+}, function() {
+  if (child) {
+    log('shutting down the child process');
+    child.kill();
+  }
+    done();
+});
 
   ////////////////
 
