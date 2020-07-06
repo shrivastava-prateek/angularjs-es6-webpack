@@ -626,7 +626,7 @@ function startTests(singleRun, done) {
   ////////////////
 
   function karmaCompleted(karmaResult) {
-    log('Karma completed');
+    log('Karma completed received code is: ' , karmaResult);
     if (child) {
       log('shutting down the child process');
       child.kill();
