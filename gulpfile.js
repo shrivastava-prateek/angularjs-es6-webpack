@@ -622,7 +622,22 @@ function startTests(singleRun, done) {
       singleRun: !!singleRun
     },
     karmaCompleted
-  ).start(); */
+  ).start();
+  
+  function karmaCompleted(karmaResult) {
+    log('Karma completed received code is: ' + karmaResult);
+    if (child) {
+      log('shutting down the child process');
+      child.kill();
+    }
+    if (karmaResult === 1) {
+      log('inside karmaResult check: ' +karmaResult);
+      done('karma: tests failed with code ' + karmaResult);
+    } else {
+      done();
+    }
+  } */
+
 
     //the below works in github actions node cli
   Karma.start({
@@ -639,19 +654,6 @@ function startTests(singleRun, done) {
 
   ////////////////
 
-  function karmaCompleted(karmaResult) {
-    log('Karma completed received code is: ' + karmaResult);
-    if (child) {
-      log('shutting down the child process');
-      child.kill();
-    }
-    if (karmaResult === 1) {
-      log('inside karmaResult check: ' +karmaResult);
-      done('karma: tests failed with code ' + karmaResult);
-    } else {
-      done();
-    }
-  }
 }
 
 /**
