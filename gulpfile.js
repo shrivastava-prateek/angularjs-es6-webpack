@@ -614,6 +614,7 @@ function startTests(singleRun, done) {
     }
   }
 
+  //the below not working in github actions node cli
  /*  new Karma(
     {
       configFile: __dirname + '/karma.conf.js',
@@ -623,13 +624,12 @@ function startTests(singleRun, done) {
     karmaCompleted
   ).start(); */
 
+    //the below works in github actions node cli
   Karma.start({
     configFile: __dirname + '/karma.conf.js',
     exclude: excludeFiles,
     singleRun: true
-}, function() {
-    done();
-});
+}, karmaCompleted);
 
   ////////////////
 
