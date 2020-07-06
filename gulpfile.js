@@ -155,7 +155,7 @@ gulp.task('clean-code', function(done) {
  * Create $templateCache from the html templates
  * @return {Stream}
  */
-gulp.task('templatecache', gulp.series('clean-code', function() {
+gulp.task('templatecache', gulp.series('clean-code', function cleanCodeCallBack() {
   log('Creating an AngularJS $templateCache');
 
   return gulp
@@ -200,7 +200,7 @@ gulp.task('inject', gulp.series(gulp.parallel('wiredep', 'styles', 'templatecach
  *    gulp test --startServers
  * @return {Stream}
  */
-gulp.task('test', gulp.series(gulp.parallel('vet', 'templatecache'), function(done) {
+gulp.task('test', gulp.series(gulp.parallel('vet', 'templatecache'), function callTest(done) {
   startTests(true /*singleRun*/, done);
 }));
 
@@ -632,6 +632,7 @@ function startTests(singleRun, done) {
       child.kill();
     }
     if (karmaResult === 1) {
+      log('inside karmaResult check: ' , karmaResult);
       done('karma: tests failed with code ' + karmaResult);
     } else {
       done();
