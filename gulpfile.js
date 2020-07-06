@@ -614,25 +614,33 @@ function startTests(singleRun, done) {
     }
   }
 
-  new Karma(
+ /*  new Karma(
     {
       configFile: __dirname + '/karma.conf.js',
       exclude: excludeFiles,
       singleRun: !!singleRun
     },
     karmaCompleted
-  ).start();
+  ).start(); */
+
+  Karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    exclude: excludeFiles,
+    singleRun: true
+}, function() {
+    done();
+});
 
   ////////////////
 
   function karmaCompleted(karmaResult) {
-    log('Karma completed received code is: ' , karmaResult);
+    log('Karma completed received code is: ' + karmaResult);
     if (child) {
       log('shutting down the child process');
       child.kill();
     }
     if (karmaResult === 1) {
-      log('inside karmaResult check: ' , karmaResult);
+      log('inside karmaResult check: ' +karmaResult);
       done('karma: tests failed with code ' + karmaResult);
     } else {
       done();
