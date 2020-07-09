@@ -7,10 +7,10 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shrivastava-prateek/angularjs-es6-webpack/src/images/AngularJS_logo.svg.png" />
 
     <!-- CSS (load bootstrap) -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <style>
         .navbar { border-radius:0; }
-    </style>
+    </style> -->
 
     <!-- JS (load angular, ui-router, and our custom js file) -->
     <!-- <script src="http://code.angularjs.org/1.2.13/angular.js"></script> -->
@@ -21,23 +21,23 @@
 <body ng-app="app">
 
 <!-- NAVIGATION -->
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-header">
         <a class="navbar-brand" ui-sref="#">AngularJS ES6 Webpack Experiment</a>
     </div>
-    <ul class="nav navbar-nav">
-        <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="about">About</a></li>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" ui-sref="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" ui-sref="about">About</a></li>
     </ul>
 </nav>
 
 <!-- MAIN CONTENT -->
-<div class="container">
+<div class="container-fluid">
 
     <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
     <div ui-view></div>
 
 </div>
-
+<!-- <img src="./assets/images/webpack.svg" /> -->
 </body>
 </html>

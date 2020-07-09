@@ -4,7 +4,7 @@ export default class ES6Controller {
 
         this.name = 'Prateek Shrivastava';
         this.age = 27;
-        console.log('inside es6 controller');
+        console.log('==inside es6 controller==');
     }
 
     changeName(newName) {

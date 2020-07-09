@@ -7,7 +7,7 @@ export default function eS6Config($stateProvider, $urlRouterProvider) {
     // HOME STATES AND NESTED VIEWS ========================================
     .state('home', {
         url: '/home',
-        templateUrl: 'src/app/es6/es6.html',
+        template: require('./es6.html'),
         controller: 'ES6Controller',
         controllerAs: 'vm'
     })
