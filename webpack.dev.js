@@ -2,9 +2,9 @@ const path = require('path');
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 module.exports = merge(common, {
     mode: 'development',
@@ -14,7 +14,6 @@ module.exports = merge(common, {
     /*   sourceMapFilename: '[name].bundle.js.map' */
     },
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
       compress: true
     },
    /*  devtool: 'source-map', */

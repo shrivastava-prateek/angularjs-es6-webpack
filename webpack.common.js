@@ -2,6 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
+const glob = require('glob');
+
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 
 module.exports = {
   entry: {
@@ -10,7 +16,7 @@ module.exports = {
   },
   devtool: false,
   plugins: [
-    new CleanWebpackPlugin(),
+  new CleanWebpackPlugin(),
     new webpack.SourceMapDevToolPlugin({
       filename: '[file].map',
       exclude: /^vendor.*\.js$/
@@ -21,7 +27,11 @@ module.exports = {
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
-    })
+    }),
+
+   new PurgeCSSPlugin({
+    paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+  })
   ],
   module: {
     rules: [
