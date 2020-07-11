@@ -1,2 +1,13 @@
 $primary: teal;
 @import "~bootstrap/scss/bootstrap";
+
+
+@font-face {
+    font-family: 'cartooncookies';
+    src:  url('../../assets/fonts/Cartoon_cookies.woff2') format('woff2'),
+          url('../../assets/fonts/Cartoon_cookies.woff') format('woff');
+}
+
+div .jumbotron h1, p{
+    font-family: cartooncookies;
+}
