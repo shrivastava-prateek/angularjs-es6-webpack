@@ -34,7 +34,7 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.10.4",
-    "angular-mocks": "~1.5.9",
+    "angular-mocks": "~1.8.0",
     "babel-loader": "^8.1.0",
     "bardjs": "~0.1.8",
     "bootstrap": "^4.3.1",
