@@ -10,11 +10,6 @@ export default function eS6Config($stateProvider, $urlRouterProvider) {
         template: require('./es6.html'),
         controller: 'ES6Controller',
         controllerAs: 'vm'
-    })
-
-    // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-    .state('about', {
-        // we'll get to this in a bit
     });
 }
 

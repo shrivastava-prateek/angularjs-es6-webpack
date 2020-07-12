@@ -1,9 +1,13 @@
 import angular from 'angular';
 import './es6/es6.module.js';
+import './about/about.module.js';
+//import commonstyles from '../assets/styles/commonstyle.scss';
+
+//console.log(commonstyles);
 
 (function() {
   'use strict';
 
-  angular.module('app', ['app.es6']);
+  angular.module('app', ['app.es6', 'app.about']);
 
 })();

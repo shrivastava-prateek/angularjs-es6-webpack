@@ -4,6 +4,11 @@
   <h1>This is the Home Page</h1>
   <p>This page demonstrates <span class="text-danger">SPA with ES6, Webpack and AngularJS</span> views.</p>   
   <button class="btn btn-primary" ng-click="vm.changeName('Bruce')">Toggle Name</button> 
+
+  <p>This flag demonstrates service call <span class="text-danger">with dynamic 
+    import using prefetching</span> The flag is now {{vm.flag}}.</p>   
+  <button class="btn btn-secondary" ng-click="vm.toggleFlagDynamic()">Toggle Flag</button> 
+
   <img src="../../assets/images/webpack.svg" class="img-fluid"/>
 </div>
 

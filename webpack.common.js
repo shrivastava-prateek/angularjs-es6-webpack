@@ -33,7 +33,7 @@ module.exports = {
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
-    new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' })
+    new MiniCssExtractPlugin({  filename: '[name].[contentHash].css' })
   ],
   module: {
     rules: [
@@ -44,7 +44,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-syntax-dynamic-import', '@babel/plugin-proposal-class-properties']
           }
         }
       },
@@ -67,7 +68,8 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader, //3. Extract css into files
           //'style-loader', //3. Inject styles into DOM
-          'css-loader', //2. Turns css into commonjs
+         'css-loader', //2. Turns css into commonjs
+         
           'sass-loader' //1. Turns sass into css
         ]
       },

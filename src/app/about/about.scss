@@ -1,0 +1,13 @@
+$primary: rgb(46, 33, 82);
+@import "~bootstrap/scss/bootstrap";
+
+
+@font-face {
+    font-family: 'cartooncookiestilted';
+    src:  url('../../assets/fonts/Cartoon_cookies_Tilted.woff2') format('woff2'),
+          url('../../assets/fonts/Cartoon_cookies_Tilted.woff') format('woff');
+}
+
+div .jumbotron h1, p{
+    font-family: cartooncookiestilted;
+}

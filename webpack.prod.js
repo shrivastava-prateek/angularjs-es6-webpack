@@ -18,9 +18,9 @@ module.exports = merge(common, {
   optimization: {
     noEmitOnErrors: true,
     splitChunks: {
-      chunks: 'all'
+      chunks: 'all',
+      minSize: 0
     },
-    runtimeChunk: false,
     minimizer: [
       new OptimizeCssAssetsPlugin({ cssProcessorOptions: {
         map: {
@@ -30,6 +30,8 @@ module.exports = merge(common, {
       }
     }) ,
       new TerserPlugin({
+        cache: true,
+        parallel: true,
         sourceMap: true
       }),
       new HtmlWebpackPlugin({
