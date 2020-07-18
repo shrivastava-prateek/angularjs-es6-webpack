@@ -1,7 +1,5 @@
 //import ES6Service from './es6utility.service';
-import es6styles from './es6sass.scss';
 
-console.log(es6styles);
 
 export default class ES6Controller {
 
@@ -12,7 +10,7 @@ export default class ES6Controller {
         this.flag = false;
         console.log('==inside es6 controller==');
         this.#_scope = $scope;
-        this.es6styles = es6styles;
+        //this.es6styles = es6styles;
     }
 
     changeName(newName) {
