@@ -52,7 +52,7 @@
     "file-loader": "^6.0.0",
     "glob": "~7.1.6",
     "gulp": "^4.0.2",
-    "gulp-angular-templatecache": "~1.4.2",
+    "gulp-angular-templatecache": "~3.0.0",
     "gulp-autoprefixer": "~2.3.1",
     "gulp-bump": "~0.3.1",
     "gulp-bytediff": "~0.2.0",
