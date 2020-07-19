@@ -1,5 +1,5 @@
 $primary: teal;
-@import "~bootstrap/scss/bootstrap";
+//@import "~bootstrap/scss/bootstrap";
 
 
 @font-face {
@@ -8,6 +8,6 @@ $primary: teal;
           url('../../assets/fonts/Cartoon_cookies.woff') format('woff');
 }
 
-div .jumbotron h1, p{
+.fontfamily{
     font-family: cartooncookies;
 }

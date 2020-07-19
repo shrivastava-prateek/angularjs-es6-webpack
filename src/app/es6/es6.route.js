@@ -1,6 +1,8 @@
+//require('./es6.html');
 export default function eS6Config($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
+
 
       $stateProvider
 
@@ -8,6 +10,7 @@ export default function eS6Config($stateProvider, $urlRouterProvider) {
     .state('home', {
         url: '/home',
         template: require('./es6.html'),
+       // templateUrl: 'es6.html',
         controller: 'ES6Controller',
         controllerAs: 'vm'
     });
