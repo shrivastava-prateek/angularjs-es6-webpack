@@ -3,7 +3,7 @@ If you want to try Webpack and ES6 with AngularJS, this project will give you mi
 
 ~~Testing framework used: Karma with Mocha, Chai~~ *In Progress*
 
-Webpack is an interesting bundler, reduces complexity and have a good documentation with all the configuration required for most of the production ready apps.
+Webpack is an interesting bundler, reduces complexity and has a good documentation with all the configuration required for, most of the production ready apps.
 
 **This project demonstrates:**
 - AngularJS with Webpack
