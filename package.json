@@ -5,8 +5,8 @@
   "scripts": {
     "init": "npm install",
     "postinstall": "webdriver-manager update",
-    "start": "webpack-dev-server  --config webpack.dev.js --open --progress --colors --hot --watch",
-    "start-prod": "webpack-dev-server --config webpack.prod.js --open --progress --colors --hot --watch",
+    "start": "webpack-dev-server  --config webpack.dev.js --progress --colors --hot --watch",
+    "start-prod": "webpack-dev-server --config webpack.prod.js --progress --colors --hot --watch",
     "test": "gulp test",
     "build": "webpack --config webpack.prod.js",
     "dev-build": "webpack --config webpack.dev.js"
@@ -107,6 +107,7 @@
     "plato": "~1.2.0",
     "purgecss-webpack-plugin": "^2.3.0",
     "q": "~1.5.1",
+    "raw-loader": "^4.0.1",
     "rm-unused-css": "^1.1.14",
     "sass": "^1.26.9",
     "sass-loader": "^9.0.1",

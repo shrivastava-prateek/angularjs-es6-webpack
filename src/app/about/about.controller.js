@@ -1,3 +1,7 @@
+import aboutstyles from './about.scss';
+
+console.log(aboutstyles);
+
 export default class AboutController {
 
     #_scope;
@@ -7,6 +11,7 @@ export default class AboutController {
         this.flag = false;
         console.log('==inside about controller==');
         this.#_scope = $scope;
+        this.aboutstyles = aboutstyles;
         
     }
 
