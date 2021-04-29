@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: karma
+    versions:
+    - 5.2.3
+    - 6.1.0
+    - 6.1.1
+  - dependency-name: dateformat
+    versions:
+    - 4.4.1
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
