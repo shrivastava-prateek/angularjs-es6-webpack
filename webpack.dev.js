@@ -14,9 +14,9 @@ module.exports = merge(common, {
     },
     devServer: {
       compress: true,
-      proxy:{
-        '/**':'http://192.168.15.188:5555'
-      }
+      // proxy:{
+      //   '/**':'http://192.168.15.188:5555'
+      // }
     },
    /*  devtool: 'source-map', */
     plugins:[
