@@ -13,7 +13,10 @@ module.exports = merge(common, {
     /*   sourceMapFilename: '[name].bundle.js.map' */
     },
     devServer: {
-      compress: true
+      compress: true,
+      proxy:{
+        '/**':'http://192.168.15.188:5555'
+      }
     },
    /*  devtool: 'source-map', */
     plugins:[
